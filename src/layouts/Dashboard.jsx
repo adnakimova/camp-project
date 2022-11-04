@@ -6,7 +6,6 @@ import Navigator from './Navi'
 export default function Dashboard() {
     return (
         <div>
-            <Navigator/>
             <Categories/>
             <ProductList/>
             </div>

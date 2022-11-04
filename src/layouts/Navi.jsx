@@ -6,22 +6,15 @@ export default function Navigator() {
         <div>
             <Menu inverted fixed>
                 <Container>
-                    <Menu.Item
-                        name='home'
-                    />
-                    <Menu.Item
-                        name='messages'
-                    />
+                    <Menu.Item name='home' />
+                    <Menu.Item name='messages' />
                     <Menu.Menu position='right'>
-                        <CartSummary>
-                        <Menu.Item>
-                            <Button primary>Sign Up</Button>
-                        </Menu.Item>
-
-                        </CartSummary>
+                        <CartSummary/>
+                            <Menu.Item>
+                                <Button primary>Sign Up</Button>
+                            </Menu.Item>
                     </Menu.Menu>
                 </Container>
-
             </Menu>
         </div>
     )
