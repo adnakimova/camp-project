@@ -1,50 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Icon, Label, Menu, Table } from 'semantic-ui-react'
 
 export default function ProductList() {
+
+    const [products, setPrducts] = useState([])
+
     return (
         <div><Table celled>
             <Table.Header>
                 <Table.Row>
-                    <Table.HeaderCell>Header</Table.HeaderCell>
-                    <Table.HeaderCell>Header</Table.HeaderCell>
-                    <Table.HeaderCell>Header</Table.HeaderCell>
+                    <Table.HeaderCell>Id</Table.HeaderCell>
+                    <Table.HeaderCell>Product Name</Table.HeaderCell>
+                    <Table.HeaderCell>Unit Price</Table.HeaderCell>
+                    <Table.HeaderCell>Units in Stock</Table.HeaderCell>
+                    <Table.HeaderCell>Category</Table.HeaderCell>
+
                 </Table.Row>
             </Table.Header>
 
             <Table.Body>
-                <Table.Row>
-                    <Table.Cell>
-                        <Label ribbon>First</Label>
-                    </Table.Cell>
-                    <Table.Cell>Cell</Table.Cell>
-                    <Table.Cell>Cell</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                    <Table.Cell>Cell</Table.Cell>
-                    <Table.Cell>Cell</Table.Cell>
-                    <Table.Cell>Cell</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                    <Table.Cell>Cell</Table.Cell>
-                    <Table.Cell>Cell</Table.Cell>
-                    <Table.Cell>Cell</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                    <Table.Cell>Cell</Table.Cell>
-                    <Table.Cell>Cell</Table.Cell>
-                    <Table.Cell>Cell</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                    <Table.Cell>Cell</Table.Cell>
-                    <Table.Cell>Cell</Table.Cell>
-                    <Table.Cell>Cell</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                    <Table.Cell>Cell</Table.Cell>
-                    <Table.Cell>Cell</Table.Cell>
-                    <Table.Cell>Cell</Table.Cell>
-                </Table.Row>
+                {
+                    products.map(product => (
+                        <Table.Row>
+                            <Table.Cell>Cell</Table.Cell>
+                            <Table.Cell>Cell</Table.Cell>
+                            <Table.Cell>Cell</Table.Cell>
+                            <Table.Cell>Cell</Table.Cell>
+                            <Table.Cell>Cell</Table.Cell>
+                        </Table.Row>
+                    ))
+                }
+
+
             </Table.Body>
 
             <Table.Footer>
