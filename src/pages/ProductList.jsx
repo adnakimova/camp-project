@@ -30,6 +30,21 @@ export default function ProductList() {
                     <Table.Cell>Cell</Table.Cell>
                     <Table.Cell>Cell</Table.Cell>
                 </Table.Row>
+                <Table.Row>
+                    <Table.Cell>Cell</Table.Cell>
+                    <Table.Cell>Cell</Table.Cell>
+                    <Table.Cell>Cell</Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                    <Table.Cell>Cell</Table.Cell>
+                    <Table.Cell>Cell</Table.Cell>
+                    <Table.Cell>Cell</Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                    <Table.Cell>Cell</Table.Cell>
+                    <Table.Cell>Cell</Table.Cell>
+                    <Table.Cell>Cell</Table.Cell>
+                </Table.Row>
             </Table.Body>
 
             <Table.Footer>

@@ -12,9 +12,15 @@ export default function Categories() {
             />
             <Menu.Item
                 name='friends'
-        
             />
-           
+            <Menu.Item
+                name='home'
+            /><Menu.Item
+                name='home'
+            /><Menu.Item
+                name='home'
+            />
+
         </Menu></div>
     )
 }
