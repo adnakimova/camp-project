@@ -6,8 +6,8 @@ export default function ProductList() {
     const [products, setPrducts] = useState([])
     useEffect(()=>{
         let productService = new ProductService()
-        productService.getProducts().then(result=>setPrducts(result.data.data)).catch()
-    })
+        productService.getProducts().then(result=>setPrducts(result.data.data))
+    }, [])
     return (
         <div><Table celled>
             <Table.Header> 
