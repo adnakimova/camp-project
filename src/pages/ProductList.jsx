@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Icon, Label, Menu, Table } from 'semantic-ui-react'
 import { ProductService } from '../services/ProductService'
 export default function ProductList() {
@@ -17,28 +18,25 @@ export default function ProductList() {
                     <Table.HeaderCell>Unit Price</Table.HeaderCell>
                     <Table.HeaderCell>Units in Stock</Table.HeaderCell>
                     <Table.HeaderCell>Category</Table.HeaderCell>
-
                 </Table.Row>
             </Table.Header>
-
             <Table.Body>
                 {
                     products.map(product => (
                         <Table.Row key={product.id}>
                             <Table.Cell>{product.id}</Table.Cell>
-                            <Table.Cell>{product.productName}</Table.Cell>
+                            <Table.Cell><Link to={`/products/${product.productName}`}>{product.productName}</Link></Table.Cell>
                             <Table.Cell>{product.unitPrice}</Table.Cell>
                             <Table.Cell>{product.unitsInStock}</Table.Cell>
                             <Table.Cell>{product.category.categoryName}</Table.Cell>
                         </Table.Row>
                     ))
                 }
-
             </Table.Body>
 
             <Table.Footer>
                 <Table.Row>
-                    <Table.HeaderCell colSpan='3'>
+                    <Table.HeaderCell colSpan='5'>
                         <Menu floated='right' pagination>
                             <Menu.Item as='a' icon>
                                 <Icon name='chevron left' />
