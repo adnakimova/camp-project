@@ -5,7 +5,10 @@ import SignedOut from './SignedOut'
 import SignedIn from './SignedIn'
 import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+
 export default function Navigator() {
+    const {cartItems} = useSelector(state=>state.cart) 
     const [isAuthenticated, setIsAuthenticated] = useState(true)
     const navigate = useNavigate()
 
@@ -24,7 +27,7 @@ export default function Navigator() {
                     <Menu.Item as={NavLink} to={"/"} name='home' />
                     <Menu.Item name='messages' />
                     <Menu.Menu position='right'>
-                        <CartSummary/>
+                        {cartItems.length>0 && <CartSummary/>}
                         {isAuthenticated?<SignedIn signOut={handleSignOut}/>
                         :<SignedOut signIn={handleSignIn}/>}
                     </Menu.Menu>
